@@ -3,9 +3,13 @@
 #include "definitions.h"
 
 // internals declarations
+//  @brief: the lhama is chewing.
 void lhama_chew(Animal self);
+//  @brief: the lhama is about to spit.
 void lhama_spit(Animal selt, Animal target);
+//  @brief: the lhama saves water in it's body.
 void lhama_saveWater(Lhama self);
+//  @brief: the lhama drinks water.
 void lhama_drinkWater(Lhama self);
 
 // constructor
