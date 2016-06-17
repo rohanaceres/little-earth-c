@@ -14,6 +14,8 @@ Eagle newEagle(string name) {
     // functions
     self->fly = &eagle_fly;
     self->makeSound = &eagle_hoot;
+
+    return self;
 }
 
 // internals definitions

@@ -4,6 +4,7 @@
 #include "animal.h"
 #include "dog.h"
 #include "eagle.h"
+#include "lhama.h"
 
 int main()
 {
@@ -22,6 +23,14 @@ int main()
     guto->grow(guto);
     guto->grow(guto);
     guto->fly(guto);
+
+    Lhama marcy = newLhama("marcy");
+
+    marcy->chew(marcy);
+    marcy->saveWater(marcy);
+    marcy->spit(marcy, alberta);
+    marcy->drinkWater(marcy);
+    marcy->drinkWater(marcy);
 
     return 0;
 }

@@ -3,7 +3,7 @@
 
 #include "animal.h"
 
-//  @brief: a deg, derived from TAnimal.
+//  @brief: a dog, derived from TAnimal.
 typedef struct TDog {
     TAnimal; // the base class
     void (*pursueTail)(void *dog);

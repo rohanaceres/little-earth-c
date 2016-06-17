@@ -18,6 +18,9 @@ Animal newAnimal(string name) {
     self->grow = &animal_grow;
     self->poop = &animal_poop;
     self->die = &animal_dispose;
+
+    printf("%s has born! :-)\n\n", name);
+
     return self;
 }
 
