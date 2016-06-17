@@ -1,14 +1,11 @@
 #ifndef _DOG_
 #define _DOG_
 
+#include "animal.h"
+
 typedef struct TDog {
-    char *name;
-    int age;
-    void (*grow)(void *dog);
+    TAnimal;
     void (*pursueTail)(void *dog);
-    void (*makeSound)(void *dog);
-    void (*poop)(void *dog);
-    void (*dispose)();
 } *Dog, TDog;
 
 Dog newDog();
