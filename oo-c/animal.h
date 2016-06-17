@@ -3,8 +3,6 @@
 
 #include "definitions.h"
 
-//typedef struct TAnimal, *Animal;
-
 struct TAnimal {
     string name;
     int age;

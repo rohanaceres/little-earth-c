@@ -18,17 +18,6 @@ Animal newAnimal(string name) {
     return self;
 }
 
-//TAnimal newTAnimal(string name) {
-//    TAnimal self = (TAnimal)malloc(sizeof(TAnimal));
-//    self.name = (string)mallo(strlen(name) * sizeof(char));
-//    self.name = strdup(name);
-//    self.age = 0;
-//    self.grow = &animal_grow;
-//    self.poop = &animal_poop;
-//    self.die = &animal_dispose;
-//    return self;
-//}
-
 // internal declarations
 void animal_grow(Animal self) {
     self->age++;
