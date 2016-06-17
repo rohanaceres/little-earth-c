@@ -1,16 +1,27 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "dog.h"
 #include "animal.h"
+#include "dog.h"
+#include "eagle.h"
 
 int main()
 {
-    Dog alberta = newDog("alberta");
+    // Create a puppy!
+    Animal alberta = newDog("alberta");
 
     alberta->grow(alberta);
     alberta->makeSound(alberta);
     alberta->pursueTail(alberta);
+
+    // Greate an eagle!
+    Eagle guto = newEagle("guto");
+
+    guto->grow(guto);
+    guto->grow(guto);
+    guto->grow(guto);
+    guto->grow(guto);
+    guto->fly(guto);
 
     return 0;
 }
