@@ -7,7 +7,9 @@
 #include "animal.h"
 
 // internals declarations
+//  @brief: the dog pursues it's tail.
 void dog_pursueTail(Animal self);
+//  @brief: the dog yowls.
 void dog_yowl(Animal self);
 
 // public definitions
@@ -23,7 +25,7 @@ Dog newDog(string name) {
 
 // internals definitions
 void dog_pursueTail(Animal self) {
-    printf("%s is pusuing it's tail! hahaha!\n", self->name);
+    printf("%s is pursuing it's tail! hahaha!\n", self->name);
 }
 void dog_yowl(Animal self) {
     printf("%s: YOOOOWWWL!!\n", self->name);

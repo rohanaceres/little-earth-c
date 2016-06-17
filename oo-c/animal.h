@@ -3,17 +3,20 @@
 
 #include "definitions.h"
 
-struct TAnimal {
+//  @brief: Definitions of the base class of all animals
+typedef struct TAnimal {
     string name;
     int age;
-    void (*makeSound)(void *self);
     void (*grow)(void *self);
     void (*poop)(void *self);
     void (*die)(void *self);
-};
 
-typedef struct TAnimal *Animal;
+    // Is implemented by derived classes
+    // because each animal sounds different.
+    void (*makeSound)(void *self);
+} *Animal, TAnimal;
 
+//  @brief: creates a new animal.
 Animal newAnimal(string name);
 
 #endif // _ANIMAL_

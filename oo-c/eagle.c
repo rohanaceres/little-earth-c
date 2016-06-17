@@ -2,7 +2,9 @@
 #include "definitions.h"
 
 // internals declarations
+//  @brief: the eagle flyes!
 void eagle_fly (Eagle self);
+//  @brief: the eagle hoots.
 void eagle_hoot (Eagle self);
 
 // constructor

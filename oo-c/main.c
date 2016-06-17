@@ -8,7 +8,7 @@
 int main()
 {
     // Create a puppy!
-    Animal alberta = newDog("alberta");
+    Dog alberta = newDog("alberta");
 
     alberta->grow(alberta);
     alberta->makeSound(alberta);

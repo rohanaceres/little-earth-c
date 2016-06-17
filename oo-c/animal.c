@@ -2,8 +2,11 @@
 #include "definitions.h"
 
 // internal definitions
+//  @brief: the animal grows one year.
 void animal_grow(Animal self);
+//  @brief: the animal poops.
 void animal_poop(Animal self);
+//  @brief: the animal dies. :-(
 void animal_dispose(Animal self);
 
 // constructor
