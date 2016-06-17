@@ -14,7 +14,7 @@ void lhama_drinkWater(Lhama self);
 
 // constructor
 Lhama newLhama(string name) {
-    Lhama self = newAnimal(name);
+    Lhama self = newAnimal(name, sizeof(TLhama));
 
     self->litersOfWater = 0;
     self->chew = &lhama_chew;

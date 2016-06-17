@@ -9,7 +9,7 @@ void eagle_hoot (Eagle self);
 
 // constructor
 Eagle newEagle(string name) {
-    Eagle self = newAnimal(name);
+    Eagle self = newAnimal(name, sizeof(TEagle));
 
     // functions
     self->fly = &eagle_fly;

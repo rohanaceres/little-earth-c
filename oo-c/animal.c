@@ -10,8 +10,9 @@ void animal_poop(Animal self);
 void animal_dispose(Animal self);
 
 // constructor
-Animal newAnimal(string name) {
-    Animal self = (Animal)malloc(sizeof(Animal));
+Animal newAnimal(string name, int derivedSize) {
+    Animal self = (Animal)malloc(derivedSize);
+
     self->name = (string)malloc(strlen(name) * sizeof(char));
     self->name = strdup(name);
     self->age = 0;

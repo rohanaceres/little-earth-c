@@ -17,6 +17,6 @@ typedef struct TAnimal {
 } *Animal, TAnimal;
 
 //  @brief: creates a new animal.
-Animal newAnimal(string name);
+Animal newAnimal(string name, int derivedSize);
 
 #endif // _ANIMAL_

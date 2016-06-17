@@ -14,7 +14,7 @@ void dog_yowl(Animal self);
 
 // public definitions
 Dog newDog(string name) {
-    Dog self = newAnimal(name);
+    Dog self = newAnimal(name, sizeof(TDog));
 
     // functions
     self->makeSound = &dog_yowl;
