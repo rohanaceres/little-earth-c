@@ -3,13 +3,15 @@
 
 // internals declarations
 //  @brief: the eagle flyes!
-void eagle_fly (Eagle self);
+void eagle_fly (void);
 //  @brief: the eagle hoots.
-void eagle_hoot (Eagle self);
+void eagle_hoot (void);
+
+int _id;
 
 // constructor
 Eagle newEagle(string name) {
-    Eagle self = newAnimal(name, sizeof(TEagle));
+    Eagle self = new(name, sizeof(TEagle), &_id);
 
     // functions
     self->fly = &eagle_fly;
@@ -19,9 +21,11 @@ Eagle newEagle(string name) {
 }
 
 // internals definitions
-void eagle_fly (Eagle self) {
+void eagle_fly (void) {
+    Eagle self = ioc_resolve(_id);
     printf("%s is flying! *O*\n", self->name);
 }
-void eagle_hoot(Eagle self) {
+void eagle_hoot(void) {
+    Eagle self = ioc_resolve(_id);
     printf("%s: TU-WHOoO!\n", self->name);
 }

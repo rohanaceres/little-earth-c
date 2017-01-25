@@ -8,13 +8,16 @@
 
 // internals declarations
 //  @brief: the dog pursues it's tail.
-void dog_pursueTail(Animal self);
+void dog_pursueTail(void);
 //  @brief: the dog yowls.
-void dog_yowl(Animal self);
+void dog_yowl(void);
+
+// TODO: Documentar.
+int _id;
 
 // public definitions
 Dog newDog(string name) {
-    Dog self = newAnimal(name, sizeof(TDog));
+    Dog self = new(name, sizeof(TDog), &_id);
 
     // functions
     self->makeSound = &dog_yowl;
@@ -24,9 +27,11 @@ Dog newDog(string name) {
 }
 
 // internals definitions
-void dog_pursueTail(Animal self) {
+void dog_pursueTail(void) {
+    Dog self = ioc_resolve(_id);
     printf("%s is pursuing it's tail! hahaha!\n", self->name);
 }
-void dog_yowl(Animal self) {
+void dog_yowl(void) {
+    Dog self = ioc_resolve(_id);
     printf("%s: YOOOOWWWL!!\n", self->name);
 }

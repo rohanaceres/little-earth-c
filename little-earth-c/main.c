@@ -11,26 +11,28 @@ int main()
     // Create a puppy!
     Dog alberta = newDog("alberta");
 
-    alberta->grow(alberta);
-    alberta->makeSound(alberta);
-    alberta->pursueTail(alberta);
+    //alberta->grow();
+    //alberta->makeSound();
+    alberta->pursueTail();
 
     // Greate an eagle!
     Eagle guto = newEagle("guto");
 
-    guto->grow(guto);
-    guto->grow(guto);
-    guto->grow(guto);
-    guto->grow(guto);
-    guto->fly(guto);
+    //guto->grow();
+    //guto->grow();
+    //guto->grow();
+    //guto->grow();
+    guto->fly();
 
     Lhama marcy = newLhama("marcy");
 
-    marcy->chew(marcy);
-    marcy->saveWater(marcy);
-    marcy->spit(marcy, alberta);
-    marcy->drinkWater(marcy);
-    marcy->drinkWater(marcy);
+    marcy->chew();
+    marcy->saveWater();
+    marcy->spit(alberta);
+    marcy->drinkWater();
+    marcy->drinkWater();
+
+    printf("the end.");
 
     return 0;
 }

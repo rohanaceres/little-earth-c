@@ -8,10 +8,10 @@
 typedef struct TLhama {
     TAnimal;
     int litersOfWater;
-    void (*chew)(void *self);
-    void (*spit)(void *self, Animal target);
-    void (*saveWater)(void *self);
-    void (*drinkWater)(void *self);
+    void (*chew)(void);
+    void (*spit)(Animal target);
+    void (*saveWater)(void);
+    void (*drinkWater)(void);
 } *Lhama, TLhama;
 
 //  @brief: crete a new lhama.

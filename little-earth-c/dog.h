@@ -6,7 +6,7 @@
 //  @brief: a dog, derived from TAnimal.
 typedef struct TDog {
     TAnimal; // the base class
-    void (*pursueTail)(void *dog);
+    void (*pursueTail)(void);
 } *Dog, TDog;
 
 //  @brief: creates a new dog.

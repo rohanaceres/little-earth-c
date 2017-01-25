@@ -6,7 +6,7 @@
 //  @brief: an eagle, derived from TAnimal.
 typedef struct TEagle {
     TAnimal; // the base class
-    void (*fly)(void *self);
+    void (*fly)(void);
 } *Eagle, TEagle;
 
 //  @brief: creates a new eagle.
