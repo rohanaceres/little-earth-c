@@ -1,38 +1,26 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "animal.h"
-#include "dog.h"
-#include "eagle.h"
-#include "lhama.h"
+#include "keyvaluepair.h"
 
-int main()
-{
-    // Create a puppy!
-    Dog alberta = newDog("alberta");
+int main() {
+    char * ceres = { 'c', 'e', 'r', 'e', 's' };
+    char * samir = { 's', 'a', 'm', 'i', 'r' };
+    char * flora = { 'f', 'l', 'o', 'r', 'a' };
 
-    //alberta->grow();
-    //alberta->makeSound();
-    alberta->pursueTail();
+    LinkedList list = newLinkedList();
 
-    // Greate an eagle!
-    Eagle guto = newEagle("guto");
+    list->display(list);
 
-    //guto->grow();
-    //guto->grow();
-    //guto->grow();
-    //guto->grow();
-    guto->fly();
+    list->add(list, 1, ceres);
+    list->display(list);
 
-    Lhama marcy = newLhama("marcy");
+    list->add(list, 2, samir);
+    list->display(list);
 
-    marcy->chew();
-    marcy->saveWater();
-    marcy->spit(alberta);
-    marcy->drinkWater();
-    marcy->drinkWater();
+    list->add(list, 3, flora);
+    list->display(list);
 
-    printf("the end.");
-
-    return 0;
+    list->remove(list, 3);
+    list->display(list);
 }
