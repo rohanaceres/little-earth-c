@@ -1,8 +1,8 @@
 #include <stdlib.h>
 
 #include "ioccontainer.h"
-#include "abstract.h"
 #include "keyvaluepair.h"
+#include "collections.h"
 
 LinkedList _container = null;
 int _autoIncrement = 1;
