@@ -8,14 +8,16 @@
 int main() {
     // Create a puppy!
     Dog alberta = newDog("alberta");
-
     alberta->grow(alberta->reflect.typeId);
     alberta->makeSound();
     alberta->pursueTail();
 
+    // ... And another puppy, because the world needs it!
+    Dog ubunto = newDog("ubuntu");
+    alberta->pursueTail();
+
     // Greate an eagle!
     Eagle guto = newEagle("guto");
-
     guto->grow(guto->reflect.typeId);
     guto->grow(guto->reflect.typeId);
     guto->grow(guto->reflect.typeId);
@@ -24,7 +26,6 @@ int main() {
 
     // A cute lhama is about to born!
     Lhama marcy = newLhama("marcy");
-
     marcy->chew();
     marcy->saveWater();
     marcy->spit(alberta);
