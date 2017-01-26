@@ -8,6 +8,8 @@ void
 keyvaluepair_remove(LinkedList self, int toRemove);
 void
 keyvaluepair_display(LinkedList self);
+void *
+keyvaluepair_getValue(LinkedList self, int key);
 
 // construction
 LinkedList newLinkedList(void) {
@@ -19,6 +21,7 @@ LinkedList newLinkedList(void) {
     self->add = &keyvaluepair_add;
     self->remove = &keyvaluepair_remove;
     self->display = &keyvaluepair_display;
+    self->getValue = &keyvaluepair_getValue;
 
     return self;
 }
@@ -75,7 +78,7 @@ keyvaluepair_remove(LinkedList self, int toRemove) {
         item = item->next;
     };
 
-    // If nothing was found, return the fundtion:
+    // If nothing was found, return:
     if (item == null) {
         printf ("Item to with ID %d not found!", toRemove);
         return;
@@ -116,4 +119,25 @@ keyvaluepair_display(LinkedList self) {
         }
         currentItem = currentItem->next;
     }
+}
+void *
+keyvaluepair_getValue(LinkedList self, int key) {
+    if (self->head == null) {
+        printf("Lista vazia.\n");
+    }
+
+    KeyValuePair item = self->head;
+
+    while (item != null && item->key != key) {
+        item = item->next;
+    };
+
+    // If nothing was found, return:
+    if (item == null) {
+        printf ("Item to with ID %d not found!", key);
+        return;
+    }
+
+    // If there is a match, return the corresponding value:
+    return item->value;
 }

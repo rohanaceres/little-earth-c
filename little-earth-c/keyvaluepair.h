@@ -17,6 +17,7 @@ struct TLinkedList {
 
     void (*display)(LinkedList self);
     void (*add)(LinkedList self, int key, void * value);
+    void *(*getValue)(LinkedList self, int key);
     void (*remove)(LinkedList self, int toRemove);
 };
 

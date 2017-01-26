@@ -47,5 +47,6 @@ void animal_poop(int animalId) {
 void animal_dispose(int animalId) {
     Animal self = ioc_resolve(animalId);
     printf("%s has died. :-(\n", self->name);
+    ioc_unregister(animalId);
     abstract_free(self);
 }
